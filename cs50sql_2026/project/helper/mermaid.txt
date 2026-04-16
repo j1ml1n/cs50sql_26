@@ -1,0 +1,27 @@
+https://mermaid.live/
+
+erDiagram
+    DISTRICT ||--|{ HOLY_SITE : contains
+    DATE_TRIP ||--o{ SITE_TRIP : includes
+    DATE_TRIP }o--|| DISTRICT : "visited on"
+    HOLY_SITE ||--o{ SITE_TRIP : "visited in"
+
+    DISTRICT { integer id PK
+               text name }
+
+    HOLY_SITE { integer id PK
+                text name
+                text type
+                text religion
+                boolean has_goshuin
+                integer district_id FK }
+
+    DATE_TRIP { integer id PK
+                integer district_id FK
+                text planned_for }
+
+    SITE_TRIP { integer id PK
+                integer trip_id FK
+                integer site_id FK
+                boolean visited
+                text got_goshuin }

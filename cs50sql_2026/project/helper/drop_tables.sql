@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS date_trip;
+DROP TABLE IF EXISTS site_trip;
+DROP TABLE IF EXISTS holy_site;
+DROP TABLE IF EXISTS district;
+
